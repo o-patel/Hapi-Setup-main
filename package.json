@@ -1,0 +1,119 @@
+{
+  "name": "cmt-api",
+  "version": "1.0.0",
+  "description": "cmt-api",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run start:local",
+    "start:local": "cross-env NODE_ENV=default nodemon server.js",
+    "start:dev": "cross-env NODE_ENV=development node server.js --development",
+    "start:prod": "cross-env NODE_ENV=production node server.js --prod",
+    "test": "jest --coverage",
+    "lint": "eslint --fix **/*.js ./"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git:https://github.com/meet2amit/cmt-api"
+  },
+  "keywords": [
+    "hapi",
+    "hapi20",
+    "cmt",
+    "cmt-api"
+  ],
+  "author": "Amit Patel <patel.amit.ce@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meet2amit/cmt-api/issues"
+  },
+  "homepage": "https://github.com/meet2amit/cmt-api#readme",
+  "dependencies": {
+    "@hapi/basic": "^6.0.0",
+    "@hapi/boom": "~9.1.4",
+    "@hapi/glue": "^8.0.0",
+    "@hapi/good": "^9.0.1",
+    "@hapi/good-console": "^9.0.1",
+    "@hapi/good-squeeze": "^6.0.0",
+    "@hapi/hapi": "^20.2.2",
+    "@hapi/inert": "^6.0.5",
+    "@hapi/vision": "^6.1.0",
+    "@joi/date": "^2.1.0",
+    "aws-sdk": "^2.1221.0",
+    "bcrypt": "^5.0.1",
+    "bluebird": "^3.7.2",
+    "config": "^3.3.7",
+    "denque": "^2.1.0",
+    "dotenv": "^16.0.1",
+    "glob": "^8.0.3",
+    "hapi-auth-jwt2": "^10.2.0",
+    "hapi-dev-errors": "^4.0.0",
+    "hapi-swagger": "^14.5.2",
+    "html-pdf-node": "^1.0.8",
+    "joi": "^17.6.0",
+    "joi-objectid": "^4.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "luxon": "^2.4.0",
+    "mailgun-js": "^0.22.0",
+    "module-alias": "^2.2.2",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.43",
+    "mongoose": "^6.3.5",
+    "mongoose-deep-populate": "^3.2.0",
+    "mongoose-fuzzy-searching": "^2.0.2",
+    "mrhorse": "^6.0.4",
+    "nodemailer": "^6.8.0",
+    "openai": "^3.2.1",
+    "path": "^0.12.7",
+    "puppeteer": "^19.0.0",
+    "pushy": "^3.0.2",
+    "qrcode": "^1.5.1",
+    "request": "^2.88.2",
+    "schmervice": "^1.6.0",
+    "sharp": "^0.31.3",
+    "uniqid": "^5.4.0",
+    "uuid": "^8.3.2",
+    "winston": "^3.8.2",
+    "zxcvbn": "^4.4.2"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@models": "server/models",
+    "@plugins": "server/plugins",
+    "@routes": "server/routes",
+    "@utilities": "server/utilities",
+    "@policies": "server/policies",
+    "@services": "server/services",
+    "@api": "server/api"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-prettier-standard": "^4.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-standard": "^4.1.0",
+    "hapi": "^17.5.4",
+    "husky": "^8.0.1",
+    "jest": "^28.1.0",
+    "lint-staged": "^13.0.0",
+    "nodemon": "^2.0.16",
+    "prettier": "2.6.2",
+    "prettier-config-standard": "^5.0.0"
+  }
+}
