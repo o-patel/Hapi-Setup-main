@@ -74,7 +74,6 @@
     "nodemailer": "^6.8.0",
     "openai": "^3.2.1",
     "path": "^0.12.7",
-    "puppeteer": "^19.0.0",
     "pushy": "^3.0.2",
     "qrcode": "^1.5.1",
     "request": "^2.88.2",
